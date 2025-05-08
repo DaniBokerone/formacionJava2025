@@ -15,6 +15,9 @@
     </properties>
 
     <dependencies>
+
+        <!-- Zxing (Generar QR) -->
+
         <dependency>
             <groupId>com.google.zxing</groupId>
             <artifactId>core</artifactId>
@@ -24,6 +27,13 @@
             <groupId>com.google.zxing</groupId>
             <artifactId>javase</artifactId>
             <version>3.5.2</version>
+        </dependency>
+
+        <!-- Dropwizard (Gestion apis) -->
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-core</artifactId>
+            <version>2.1.4</version>
         </dependency>
     </dependencies>
 

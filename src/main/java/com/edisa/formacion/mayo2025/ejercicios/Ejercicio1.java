@@ -4,6 +4,7 @@ import com.google.zxing.*;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.Scanner;
@@ -107,5 +108,21 @@ public class Ejercicio1 {
 
         BitMatrix bitMatrix = new MultiFormatWriter().encode(text, formato, ancho, alto);
         MatrixToImageWriter.writeToPath(bitMatrix, "JPG", rutaArchivo);
+    }
+
+    //FUNCION SOLO PARA API
+    public static BufferedImage generarCodigoBarrasApi(String text, BarcodeFormat formato)
+            throws WriterException {
+
+        int ancho = 300;
+        int alto = 300;
+
+        if (formato == BarcodeFormat.EAN_13 || formato == BarcodeFormat.CODE_128) {
+            ancho = 400;
+            alto = 150;
+        }
+
+        BitMatrix bitMatrix = new MultiFormatWriter().encode(text, formato, ancho, alto);
+        return MatrixToImageWriter.toBufferedImage(bitMatrix);
     }
 }
