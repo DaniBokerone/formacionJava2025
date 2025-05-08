@@ -22,10 +22,13 @@ public class Main {
 
                 switch (opcion) {
                     case 1:
-                        Ejercicio1.ejecutar(scanner);
+                        Ejercicio1.ejecutar_ex1(scanner);
+                        break;
+                    case 2:
+                        Ejercicio1.ejecutar_ex2(scanner);
                         break;
                     case 0:
-                        System.out.println("Saliendo...");
+                        System.out.println("Buenos dias, buenas tardes, y buenas noches ...");
                         break;
                     default:
                         System.out.println("Opción no válida.");
